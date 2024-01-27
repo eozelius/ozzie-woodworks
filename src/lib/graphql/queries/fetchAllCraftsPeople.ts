@@ -8,25 +8,12 @@ export const fetchAllCraftsPeopleQuery = `
       name,
       description {
         json,
-        links {
-          entries {
-            inline {
-              contentfulMetadata {
-                tags {
-                  id, name
-                }
-              }
-            }
-          },
-          assets {
-            hyperlink {
-              title, description, contentType, fileName, url
-            },
-            block {
-              title, description, contentType, fileName, url
-            }
-          }
-        }
+      },
+      profilePhoto {
+        url,
+        fileName,
+        title,
+        description
       }
     }
   }

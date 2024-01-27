@@ -5,7 +5,19 @@ export const fetchAllProductsQuery = `
       description {
         json
       },
-      title
+      title,
+      dropbox,
+      craftsperson {
+        sys {id}
+      }
+      photosCollection {
+        items {
+          url,
+          title,
+          description,
+          fileName
+        }
+      }
     }
   }
 `

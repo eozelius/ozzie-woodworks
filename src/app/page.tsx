@@ -3,9 +3,9 @@ import { useContentfulHomepageQuery } from '@/hooks/useContentfulHomepageQuery'
 export default async function Home() {
   const { products, craftsPeople, ozziesMiscWoodworking } = await useContentfulHomepageQuery()
 
-  console.log('[ Home ] render() products => ', products)
-  console.log('[ Home ] render() craftsPeople => ', craftsPeople)
-  console.log('[ Home ] render() ozziesMiscWoodworking => ', ozziesMiscWoodworking)
+  console.log('[ Home ] render() products => ', JSON.stringify(products))
+  // console.log('[ Home ] render() craftsPeople => ', JSON.stringify(craftsPeople))
+  // console.log('[ Home ] render() ozziesMiscWoodworking => ', JSON.stringify(ozziesMiscWoodworking))
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

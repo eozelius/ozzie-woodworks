@@ -3,11 +3,14 @@ import axios from 'axios'
 import { fetchAllProductsQuery } from '@/lib/graphql/queries/fetchAllProducts'
 import { fetchAllCraftsPeopleQuery } from '@/lib/graphql/queries/fetchAllCraftsPeople'
 import { fetchHomepageBanner } from '@/lib/graphql/queries/fetchHomepageBanner'
+import { TOzziesMiscWoodworking } from '@/types/ozziesMiscWoodworking'
+import { TCraftsPersonBio } from '@/types/craftspersonBio'
+import { TWoodworkingEcommerceApp } from '@/types/woodworkingEcommerceApp'
 
 type TResponse = {
-  products: any
-  craftsPeople: any
-  ozziesMiscWoodworking: any
+  products: TWoodworkingEcommerceApp[]
+  craftsPeople: TCraftsPersonBio[]
+  ozziesMiscWoodworking: TOzziesMiscWoodworking
 }
 
 const spaceId = process.env.CONTENTFUL_SPACE_ID
@@ -34,7 +37,6 @@ export async function useContentfulHomepageQuery(): Promise<TResponse> {
       }
     })
 
-    console.log('[ useCHomepageQ ] na() response => ', response.data.data)
   } catch (error) {
     // @ts-ignore
     console.error('caught error =>', error.response.data)
@@ -42,7 +44,7 @@ export async function useContentfulHomepageQuery(): Promise<TResponse> {
       // @ts-ignore
       products: [],
       craftsPeople: [],
-      ozziesMiscWoodworking: {}
+      ozziesMiscWoodworking: {} as TOzziesMiscWoodworking
     }
   }
 
@@ -50,6 +52,6 @@ export async function useContentfulHomepageQuery(): Promise<TResponse> {
     // @ts-ignore
     products: response.data.data.woodworkingEcommerceAppCollection.items,
     craftsPeople: response.data.data.craftspersonBioCollection.items,
-    ozziesMiscWoodworking: response.data.data.ozziesMiscWoodworking
+    ozziesMiscWoodworking: response.data.data.ozziesMiscWoodworking as TOzziesMiscWoodworking
   }
 }
