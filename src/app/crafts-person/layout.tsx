@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import '../globals.css'
 
 export const metadata: Metadata = {
-  title: 'Ozzie Woodworking - Craft Persons',
-  description: 'Ozzie Woodworking - Craft Persons Page, lists all Crafts Persons',
+  title: 'Ozzie Woodworks - Craft Persons',
+  description: 'Ozzie Woodworks - Craft Persons Page, lists all Crafts Persons',
 }
 
 export default function CraftsPersonLayout ({

@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import '../../globals.css'
 
 export const metadata: Metadata = {
-  title: 'Ozzie Woodworking - Single Crafts Person',
-  description: 'Ozzie Woodworking - Single Crafts Person Profile Page', // todo: interpolate craftsperson name/bio
+  title: 'Ozzie Woodworks - Single Crafts Person',
+  description: 'Ozzie Woodworks - Single Crafts Person Profile Page', // todo: interpolate craftsperson name/bio
 }
 
 // type TProps = {

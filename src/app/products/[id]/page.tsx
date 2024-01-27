@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import '../../globals.css'
 
 export const metadata: Metadata = {
-  title: 'Ozzie Woodworking - Single Product',
-  description: 'Ozzie Woodworking - Single Product Page', // todo: interpolate product name/description
+  title: 'Ozzie Woodworks - Single Product',
+  description: 'Ozzie Woodworks - Single Product Page', // todo: interpolate product name/description
 }
 
 export default function SingleProductPage ({ params }: { params: { id: string } }) {
