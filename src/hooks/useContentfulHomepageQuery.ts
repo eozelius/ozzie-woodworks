@@ -10,7 +10,7 @@ import { TWoodworkingEcommerceApp } from '@/types/woodworkingEcommerceApp'
 type TResponse = {
   products: TWoodworkingEcommerceApp[]
   craftsPeople: TCraftsPersonBio[]
-  ozziesMiscWoodworking: TOzziesMiscWoodworking
+  homePageAssets: TOzziesMiscWoodworking
 }
 
 const spaceId = process.env.CONTENTFUL_SPACE_ID
@@ -44,7 +44,7 @@ export async function useContentfulHomepageQuery(): Promise<TResponse> {
       // @ts-ignore
       products: [],
       craftsPeople: [],
-      ozziesMiscWoodworking: {} as TOzziesMiscWoodworking
+      homePageAssets: {} as TOzziesMiscWoodworking
     }
   }
 
@@ -52,6 +52,6 @@ export async function useContentfulHomepageQuery(): Promise<TResponse> {
     // @ts-ignore
     products: response.data.data.woodworkingEcommerceAppCollection.items,
     craftsPeople: response.data.data.craftspersonBioCollection.items,
-    ozziesMiscWoodworking: response.data.data.ozziesMiscWoodworking as TOzziesMiscWoodworking
+    homePageAssets: response.data.data.ozziesMiscWoodworking as TOzziesMiscWoodworking
   }
 }
