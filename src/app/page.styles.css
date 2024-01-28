@@ -3,5 +3,17 @@
 }
 
 #banner_contianer img {
-  margin: 5%;
+  margin: 5% 0;
+}
+
+#products_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.products-list-item-container {
+  border: 2px solid #fefefe;
+  border-radius: 3px;
+  margin: 0 0 5%
 }
